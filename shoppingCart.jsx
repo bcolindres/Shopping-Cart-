@@ -1,7 +1,3 @@
-// Ex 3 - write out all items with their stock number
-// provide a button and use onClick to move 1 item into the Shopping Cart
-// use React.useState to keep track of items in the Cart.
-// list out the Cart items in another column
 function NavBar({ menuitems }) {
   const { Card, Button } = ReactBootstrap;
   const [stock, setStock] = React.useState(menuitems);
@@ -18,7 +14,8 @@ function NavBar({ menuitems }) {
       }
       return item;
     });
-    // now filter out stock items == 0;
+
+    
 
     setStock([...newStock]);
     setCart([...cart, ...item]); // for now don't worry about repeat items in Cart
@@ -31,7 +28,9 @@ function NavBar({ menuitems }) {
       </Button>
     );
   });
-  // note that React needs to have a single Parent
+
+
+  
   return (
     <>
       <ul key="stock" style={{ listStyleType: "none" }}>
